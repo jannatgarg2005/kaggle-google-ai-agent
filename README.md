@@ -1,123 +1,139 @@
-# PlacementCoach Pro 🎯
-### AI Agent for Campus Placement Preparation | Kaggle × Google AI Agents Intensive 2026
+# PlacementCoach Pro
+**AI Career Coach Agent for Engineering Placement Preparation**
 
-[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/jannatgarg)
-[![Google Gemini](https://img.shields.io/badge/Gemini_API-1.5_Flash-4285F4?style=for-the-badge&logo=google)](https://aistudio.google.com)
-[![Track](https://img.shields.io/badge/Track-Agents_for_Good-green?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)]()
+[![Live App](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/)
+[![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/jannatgarg)
+[![Gemini API](https://img.shields.io/badge/Gemini_2.0-Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com)
+[![Track](https://img.shields.io/badge/Track-Agents_for_Good-2ea44f?style=for-the-badge)](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+**Competition:** AI Agents: Intensive Vibe Coding Capstone Project — Kaggle x Google 2026  
+**Author:** Jannat Garg | B.Tech CSE, BPIT New Delhi  
+**GitHub:** [github.com/jannatgarg2005](https://github.com/jannatgarg2005) | **LinkedIn:** [jannat-garg-1699a3366](https://www.linkedin.com/in/jannat-garg-1699a3366)
 
 ---
 
-## 🚨 The Problem
+## The Problem
 
 Every year, **1.5 million+ engineering graduates** in India compete for a fraction of AI/ML roles.
 
-Most students face this exact situation:
-- ❌ Don't know which companies match their profile
-- ❌ Don't know what to study or in what order
-- ❌ Can't afford ₹50,000+ career counselling sessions
-- ❌ Get generic advice that doesn't consider their specific background
-- ❌ No personalized mock interview practice
+Most students face this:
+- Do not know which companies match their profile
+- Do not know what to study or in what order
+- Cannot afford Rs.50,000+ career counselling sessions
+- Get generic advice that ignores their specific background
+- Have no personalized mock interview practice
 
-**I am one of these students.** I'm Jannat Garg, final-year B.Tech CSE at BPIT Delhi. I built the solution I needed.
+**I am one of these students.** I built the tool I needed.
 
 ---
 
-## 💡 The Solution: PlacementCoach Pro
+## The Solution: PlacementCoach Pro
 
-An intelligent **multi-agent AI system** that acts as a personal career coach — available 24/7, completely free, and fully personalized to each student.
+An intelligent **multi-tool AI agent** that acts as a personal career coach — available 24/7, completely free, and personalized to each student.
 
-### Why Agents (not just a chatbot)?
+### Why Agents and Not Just a Chatbot?
 
 | Feature | Regular Chatbot | PlacementCoach Pro |
-|---------|----------------|-------------------|
-| Memory | Forgets each turn | ✅ Remembers your full profile |
-| Actions | Only talks | ✅ Fetches company data, scores resume |
-| Personalization | Generic responses | ✅ Adapts to YOUR profile |
-| Tools | None | ✅ 5 specialized tools |
-| Error handling | Crashes | ✅ Graceful degradation |
+|---------|----------------|--------------------|
+| Memory | Forgets each turn | Remembers full student profile |
+| Actions | Only talks | Fetches company data, scores resume |
+| Personalization | Generic | Adapts to YOUR specific profile |
+| Tools | None | 5 specialized tools |
+| Error handling | Crashes | Graceful retry logic |
 
 ---
 
-## 🏗️ Architecture
+## Live Demo and Deployment
+
+| Link | Description |
+|------|-------------|
+| [Live Streamlit App](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/) | Interactive web app — try your own profile |
+| [Kaggle Notebook](https://www.kaggle.com/jannatgarg) | Full agent code with all 5 tools | 
+| [Demo Video](https://loom.com) | 3-minute walkthrough of the agent | 
+| [GitHub Repo](https://github.com/jannatgarg2005/kaggle-google-ai-agent) | Full source code and README |
+
+> **REPLACE** the Streamlit, Kaggle notebook, and Loom links above with your real URLs after deployment.
+
+### Two Ways to Run This
+
+**Option 1 — Live Streamlit App (Recommended for judges)**  
+Visit [placementcoach.streamlit.app](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/) — enter your own profile and get personalized results instantly. No setup required.
+
+**Option 2 — Kaggle Notebook**  
+Open the notebook, click Copy and Edit, add your Gemini API key in Secrets, and click Run All.
+
+---
+
+## Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                    Student (User)                    │
-└───────────────────────┬─────────────────────────────┘
-                        │ natural language input
-                        ▼
-┌─────────────────────────────────────────────────────┐
-│           PlacementCoach Pro Agent                   │
-│         (Gemini 1.5 Flash + System Instructions)    │
-│                                                     │
-│  Memory Store: student_profile {}                   │
-│  • name, college, cgpa, skills, projects            │
-│  • target_companies, certifications                 │
-│  • Persists across ALL conversation turns           │
-└──────────────────┬──────────────────────────────────┘
-                   │ Automatic Function Calling
-          ┌────────┼────────────────────┐
-          ▼        ▼                    ▼
-    ┌──────────┐ ┌──────────────┐ ┌────────────────┐
-    │ Company  │ │   Resume     │ │   Study Plan   │
-    │ Pattern  │ │  Evaluator   │ │  Generator     │
-    │  Tool    │ │    Tool      │ │    Tool        │
-    └──────────┘ └──────────────┘ └────────────────┘
-          ▼        ▼                    ▼
-    ┌──────────┐ ┌──────────────┐
-    │  Mock    │ │  Job Search  │
-    │Interview │ │  Strategy    │
-    │   Tool   │ │    Tool      │
-    └──────────┘ └──────────────┘
-          │
-          ▼
-┌─────────────────────────────────────────────────────┐
-│         Personalized Response to Student             │
-└─────────────────────────────────────────────────────┘
+Student Input (natural language)
+        |
+        v
++-----------------------------------------------+
+|         PlacementCoach Pro Agent              |
+|      Gemini 2.0 Flash + System Instructions   |
+|                                               |
+|  student_profile {}  <-- MEMORY               |
+|  Updates every turn, persists full session    |
++-----------------------------------------------+
+        |
+        | Automatic Function Calling
+        |
+   +---------+-----------+-----------+----------+
+   |         |           |           |          |
+   v         v           v           v          v
+Tool 1    Tool 2      Tool 3      Tool 4     Tool 5
+Resume    Company     Study       Mock       Job
+Scorer    Pattern     Plan        Interview  Search
+          Fetcher     Generator   Questions  Strategy
+   |         |           |           |          |
+   v         v           v           v          v
+        Personalized Response to Student
 ```
 
 ---
 
-## 🔧 Tools Built (Function Calling)
+## Tools Built (Function Calling)
 
-| Tool | Purpose | Input | Output |
-|------|---------|-------|--------|
-| `get_company_interview_pattern()` | Fetch interview rounds, focus areas, pro tips | company name | Structured interview data |
-| `evaluate_resume_strength()` | Score resume 0-100 with prioritized feedback | skills, projects, CGPA, etc. | Score + action items |
-| `generate_study_plan()` | Create week-by-week preparation schedule | target company, days, hours | Complete study roadmap |
-| `get_mock_interview_questions()` | Adaptive DSA/ML/behavioral questions | role, difficulty, domain | Questions + hints + frameworks |
-| `search_job_openings()` | Job search strategy and platform recommendations | role, experience level | Strategy + platforms + tips |
-
----
-
-## 🛠️ Technologies Used
-
-- **Gemini 1.5 Flash** — Core LLM powering the agent
-- **Google AI Python SDK** (`google-generativeai`) — API integration
-- **Function Calling** — Automatic tool use by the agent
-- **Kaggle Secrets** — Secure API key management (no hardcoded keys)
-- **Python** — Agent architecture, tools, memory management
+| Tool | Purpose | Output |
+|------|---------|--------|
+| `evaluate_resume_strength()` | Scores resume 0-100 with ranked feedback | Score + priority action items |
+| `get_company_interview_pattern()` | Fetches interview rounds per company | Rounds, CTC, pro tips |
+| `generate_study_plan()` | Creates week-by-week prep schedule | Timeline + daily routine |
+| `get_mock_interview_questions()` | Adaptive questions with hints | Questions + answer frameworks |
+| `search_job_openings()` | Job search strategy by role | Platforms + immediate steps |
 
 ---
 
-## 🚀 Setup Instructions
+## Course Concepts Demonstrated
 
-### Prerequisites
-- Kaggle account (phone verified)
-- Google AI Studio API key (free at [aistudio.google.com](https://aistudio.google.com))
+| Concept | Implementation |
+|---------|---------------|
+| Gemini API | gemini-2.0-flash via google-generativeai SDK |
+| Function Calling | 5 custom typed tools with structured JSON output |
+| Automatic Function Calling | enable_automatic_function_calling=True |
+| Multi-turn Stateful Memory | student_profile dict updates every conversation turn |
+| System Instructions | Agent personality, behavior rules, response format |
+| Error Handling | Retry logic with exponential backoff for rate limits |
+| Safe Key Management | Kaggle Secrets only — no hardcoded API keys |
 
-### Run on Kaggle (Recommended — Zero Setup)
+---
 
-1. **Open the Kaggle notebook:** [Link to your notebook]
-2. **Add your API key:**
-   - Click `Add-ons` → `Secrets`
-   - Add secret: Name = `GEMINI_API_KEY`, Value = your key
-   - Toggle `Notebook has access` → ON
-3. **Run all cells:** `Session` → `Run All`
-4. Watch PlacementCoach Pro in action!
+## Setup and Run
 
-### Run Locally
+### Option 1 — Run on Kaggle (Recommended, Zero Setup)
+
+1. Open the Kaggle Notebook — REPLACE WITH YOUR NOTEBOOK URL
+2. Click **Copy and Edit**
+3. Add your Gemini API key:
+   - Click **Add-ons** then **Secrets**
+   - Name: `GEMINI_API_KEY` | Value: your key from [aistudio.google.com](https://aistudio.google.com/app/apikey)
+   - Toggle **Notebook has access** to ON
+4. Click **Run All**
+
+### Option 2 — Run Locally
 
 ```bash
 # Clone the repository
@@ -127,66 +143,81 @@ cd kaggle-google-ai-agent
 # Install dependencies
 pip install google-generativeai
 
-# Set your API key
+# Set your API key (never hardcode it)
 export GEMINI_API_KEY="your-api-key-here"
 
 # Run the agent
 python placementcoach_capstone.py
 ```
 
-> ⚠️ **Security Note:** Never hardcode API keys. Always use environment variables or secure secret managers.
+---
+
+## What the Demo Shows
+
+```
+PART 1: Direct Tool Execution (no API quota needed)
+  Tool 1: Resume scored 68/100 for student profile
+  Tool 2: Amazon 7 interview rounds with pro tips
+  Tool 3: 45-day study plan with time allocation breakdown
+  Tool 4: 3 ML questions with hints and answer frameworks
+  Tool 5: Top job platforms with application strategy
+
+PART 2: Multi-turn Stateful Conversation (3 turns)
+  Turn 1: Student shares profile -> agent evaluates resume
+  Turn 2: Student targets Amazon -> agent fetches rounds + builds plan
+  Turn 3: Student asks for questions -> agent gives mock interview set
+
+  Key: Agent remembers CGPA, college, and targets across ALL turns
+  without being re-told. This is multi-turn stateful memory.
+
+PART 3: Session Report
+  Summary of student profile captured and all concepts shown
+```
 
 ---
 
-## 📊 Course Concepts Demonstrated
-
-| Concept | Implementation |
-|---------|---------------|
-| ✅ Gemini API | `genai.GenerativeModel("gemini-1.5-flash")` |
-| ✅ Function Calling | 5 custom tools with typed inputs/outputs |
-| ✅ Automatic Function Calling | `enable_automatic_function_calling=True` |
-| ✅ Multi-turn Memory | `student_profile` dict persists across session |
-| ✅ System Instructions | Personality, behavior rules, response format |
-| ✅ Error Handling | Quota limits, invalid API keys, bad inputs |
-| ✅ Structured Output | JSON responses from all tools |
-| ✅ Safe Key Management | Kaggle Secrets + environment variables |
-
----
-
-## 🌍 Social Impact (Agents for Good)
+## Social Impact (Agents for Good)
 
 **Who this helps:**
 - 1.5M+ engineering graduates in India annually
-- Students from tier-2/tier-3 colleges without campus placement support
+- Students from tier-2 and tier-3 colleges without placement cell support
 - First-generation college students with no industry connections
-- Students who cannot afford career counselling (₹50,000+ per session)
+- Students who cannot afford Rs.50,000+ per career coaching session
 
 **What it replaces:**
 - Expensive career coaches
-- Generic YouTube "how to get placed" videos
-- One-size-fits-all preparation guides
-
-**What makes it unique:**
-- Fully personalized to each student's profile
-- Free and accessible to anyone with internet
-- Available 24/7 — no appointment needed
-- Scales infinitely — one agent, millions of students
+- Generic one-size-fits-all prep guides
+- Unstructured YouTube advice
 
 ---
 
-## 👩‍💻 About the Author
+## Project Structure
 
-**Jannat Garg**
-Final Year B.Tech CSE | BPIT, New Delhi | AI/ML Engineer in the making
+```
+kaggle-google-ai-agent/
+    app.py                        Streamlit web app (live deployment)
+    placementcoach_capstone.py    Kaggle notebook code (all 6 cells)
+    requirements.txt              Python dependencies for Streamlit Cloud
+    README.md                     This file
+    .gitignore                    Excludes API keys and cache files
+```
 
-- 🔗 GitHub: [github.com/jannatgarg2005](https://github.com/jannatgarg2005)
-- 🔗 Kaggle: [kaggle.com/jannatgarg](https://www.kaggle.com/jannatgarg)
-- 🔗 LinkedIn: [linkedin.com/in/jannat-garg-1699a3366](https://www.linkedin.com/in/jannat-garg-1699a3366)
+---
+
+## Author
+
+**Jannat Garg**  
+Final Year B.Tech CSE | BPIT New Delhi | AI/ML Engineer
+
+- GitHub: [github.com/jannatgarg2005](https://github.com/jannatgarg2005)
+- Kaggle: [kaggle.com/jannatgarg](https://www.kaggle.com/jannatgarg)
+- LinkedIn: [jannat-garg-1699a3366](https://www.linkedin.com/in/jannat-garg-1699a3366)
+- Email: jannatgarg2005@gmail.com
 
 *"I built the tool I wish existed when I started my placement preparation."*
 
 ---
 
-## 📄 License
+## License
 
-MIT License — Free to use, modify, and distribute with attribution.
+MIT License. Free to use, modify, and distribute with attribution.
