@@ -50,7 +50,7 @@ An intelligent **multi-tool AI agent** that acts as a personal career coach — 
 |------|-------------|
 | [Live Streamlit App](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/) | Interactive web app — try your own profile |
 | [Kaggle Notebook](https://www.kaggle.com/jannatgarg) | Full agent code with all 5 tools | 
-| [Demo Video](https://loom.com) | 3-minute walkthrough of the agent | 
+| [Demo Video](https://www.loom.com/share/e16fe18fbcbd468792e6e195b9cc8321) | 3-minute walkthrough of the agent | 
 | [GitHub Repo](https://github.com/jannatgarg2005/kaggle-google-ai-agent) | Full source code and README |
 
 > **REPLACE** the Streamlit, Kaggle notebook, and Loom links above with your real URLs after deployment.
