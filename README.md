@@ -204,7 +204,7 @@ kaggle-google-ai-agent/
 
 ---
 
-## Author
+## Author..
 
 **Jannat Garg**  
 Final Year B.Tech CSE | BPIT New Delhi | AI/ML Engineer
@@ -218,7 +218,7 @@ Final Year B.Tech CSE | BPIT New Delhi | AI/ML Engineer
 
 ---
 
-## License
+## License..
 
 MIT License. Free to use, modify, and distribute with attribution.
 
