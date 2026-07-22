@@ -13,7 +13,7 @@
 
 ---
 
-## The Problem
+## The Problem Adressed 
 
 Every year, **1.5 million+ engineering graduates** in India compete for a fraction of AI/ML roles.
 
