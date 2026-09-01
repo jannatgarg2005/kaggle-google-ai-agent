@@ -121,7 +121,7 @@ Scorer    Pattern     Plan        Interview  Search
 
 ---
 
-## Setup and Run
+## Setup and Run of the project
 
 ### Option 1 — Run on Kaggle (Recommended, Zero Setup)
 
