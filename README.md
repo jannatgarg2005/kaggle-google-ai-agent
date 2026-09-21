@@ -17,7 +17,7 @@
 
 Every year, **1.5 million+ engineering graduates** in India compete for a fraction of AI/ML roles.
 
-Most students face this:
+Most students face this issue:
 - Do not know which companies match their profile
 - Do not know what to study or in what order
 - Cannot afford Rs.50,000+ career counselling sessions
