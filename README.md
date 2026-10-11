@@ -19,7 +19,6 @@ Every year, **1.5 million+ engineering graduates** in India compete for a fracti
 
 Most students face this issue:
 - Do not know which companies match their profile
-- Do not know what to study or in what order
 - Cannot afford Rs.50,000+ career counselling sessions
 - Get generic advice that ignores their specific background
 - Have no personalized mock interview practice
