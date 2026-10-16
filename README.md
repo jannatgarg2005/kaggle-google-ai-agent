@@ -175,21 +175,6 @@ PART 3: Session Report
 
 ---
 
-## Social Impact (Agents for Good)
-
-**Who this helps:**
-- 1.5M+ engineering graduates in India annually
-- Students from tier-2 and tier-3 colleges without placement cell support
-- First-generation college students with no industry connections
-- Students who cannot afford Rs.50,000+ per career coaching session
-
-**What it replaces:**
-- Expensive career coaches
-- Generic one-size-fits-all prep guides
-
-
----
-
 ## Project Structure
 
 ```
