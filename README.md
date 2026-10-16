@@ -214,11 +214,3 @@ Final Year B.Tech CSE | BPIT New Delhi | AI/ML Engineer
 - Email: jannatgarg2005@gmail.com
 
 *"I built the tool I wish existed when I started my placement preparation."*
-
----
-
-## License..
-
-MIT License. Free to use, modify, and distribute with attribution.
-
-*" The End "*
