@@ -1,5 +1,5 @@
 # PlacementCoach Pro
-**AI Career Coach Agent for Engineering Placement Preparation Model**
+**AI Career Coach Agent for Engineering Placement Preparation**
 
 [![Live App](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/)
 [![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/jannatgarg)
