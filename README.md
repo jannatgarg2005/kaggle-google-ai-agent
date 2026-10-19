@@ -21,7 +21,6 @@ Most students face this issue:
 - Do not know which companies match their profile
 - Cannot afford Rs.50,000+ career counselling sessions
 - Get generic advice that ignores their specific background
-- Have no personalized mock interview practice
 
 **I am one of these students.** I built the tool I needed.
 
