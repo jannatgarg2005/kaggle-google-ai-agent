@@ -1,6 +1,8 @@
 # PlacementCoach Pro
 **AI Career-Coach Agent for Engineering Placement Preparation**
 
+PlacementCoach Pro is an AI-powered career-coaching agent designed to help engineering students prepare for placements through personalized, data-driven guidance. Built using Gemini 2.0 Flash, Python, and Streamlit, it integrates five specialized tools for resume evaluation, company interview research, study-plan generation, mock interview preparation, and job-search strategy. With multi-turn conversational memory and automated tool calling, it adapts to each student's profile, skills, CGPA, and career goals to provide actionable placement guidance in one accessible platform.
+
 [![Live App](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://kaggle-app-ai-agent-uxi2imzmcnxc7r88bj7q4n.streamlit.app/)
 [![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/jannatgarg)
 [![Gemini API](https://img.shields.io/badge/Gemini_2.0-Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com)
